@@ -6,7 +6,7 @@ class SearchApplicationTests extends Specification {
 
 	void 'dummy test to test build/tests'() {
         expect:
-        4 == 3 + 2
+        4 == 2 + 2
     }
 
 }
