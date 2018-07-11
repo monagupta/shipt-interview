@@ -1,15 +1,15 @@
 buildscript {
-	ext {
-		springBootVersion = '2.0.3.RELEASE'
+    ext {
+        springBootVersion = '2.0.3.RELEASE'
         spockVersion = '1.1-groovy-2.4'
         elasticsearchVersion = '6.3.0'
     }
-	repositories {
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
 apply plugin: 'groovy'
@@ -21,15 +21,14 @@ version = '0.0.1'
 sourceCompatibility = 1.8
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
-
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter')
-	compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+    compile('org.springframework.boot:spring-boot-starter')
+    compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
 
-	compile('org.codehaus.groovy:groovy')
+    compile('org.codehaus.groovy:groovy')
 
     compile "org.elasticsearch:elasticsearch:${elasticsearchVersion}"
     compile "org.elasticsearch.client:transport:${elasticsearchVersion}"
@@ -37,5 +36,6 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile "org.spockframework:spock-core:${spockVersion}"
     testCompile "org.spockframework:spock-spring:${spockVersion}"
-    testRuntime "org.objenesis:objenesis:2.5.1"    // allows mocking of classes without default constructor (together with CGLIB)
+    testRuntime "org.objenesis:objenesis:2.5.1"
+    // allows mocking of classes without default constructor (together with CGLIB)
 }

@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 @SpringBootApplication
 class SearchApplication {
 
-	static void main(String[] args) {
-		SpringApplication.run(SearchApplication, args)
-	}
+    static void main(String[] args) {
+        SpringApplication.run(SearchApplication, args)
+    }
 }
